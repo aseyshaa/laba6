@@ -19,7 +19,6 @@ class Student(Person):
         print(f"Студенческий ID: {self.student_id}, Специальность: {self.major}")
 
 
-
 class Teacher(Person):
     def __init__(self, name, age, gender, teacher_id, department):
         super().__init__(name, age, gender)
@@ -31,13 +30,14 @@ class Teacher(Person):
         print(f"ID преподавателя: {self.teacher_id}, Кафедра: {self.department}")
 
 
-
 class DepartmentHead(Teacher):
-    def __init__(self):
-        pass
+    def __init__(self, name, age, gender, teacher_id, department, department_name):
+        super().__init__(name, age, gender, teacher_id, department)
+        self.department_name = department_name
 
     def get_info(self):
-        pass
+        super().get_info()
+        print(f"Название кафедры: {self.department_name}")
 
 
 def add_person():
