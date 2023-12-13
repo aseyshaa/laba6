@@ -67,16 +67,28 @@ def add_person(person_list):
     print("Человек успешно добавлен!")
 
 
-def view_students():
-    pass
+def view_students(person_list):
+    print("Студенты:")
+    for person in person_list:
+        if isinstance(person, Student):
+            person.get_info()
+            print()
 
 
-def view_teachers():
-    pass
+def view_teachers(person_list):
+    print("Преподаватели:")
+    for person in person_list:
+        if isinstance(person, Teacher):
+            person.get_info()
+            print()
 
 
-def view_department_heads():
-    pass
+def view_department_heads(person_list):
+    print("Заведующие кафедрой:")
+    for person in person_list:
+        if isinstance(person, DepartmentHead):
+            person.get_info()
+            print()
 
 
 def main():
