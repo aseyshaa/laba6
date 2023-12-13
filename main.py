@@ -20,12 +20,16 @@ class Student(Person):
 
 
 
-class Teacher():
-    def __init__(self):
-        pass
+class Teacher(Person):
+    def __init__(self, name, age, gender, teacher_id, department):
+        super().__init__(name, age, gender)
+        self.teacher_id = teacher_id
+        self.department = department
 
     def get_info(self):
-        pass
+        super().get_info()
+        print(f"ID преподавателя: {self.teacher_id}, Кафедра: {self.department}")
+
 
 
 class DepartmentHead(Teacher):
