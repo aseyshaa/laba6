@@ -8,12 +8,16 @@ class Person:
         print(f"Имя: {self.name}, Возраст: {self.age}, Пол: {self.gender}")
 
 
-class Student():
-    def __init__(self):
-        pass
+class Student(Person):
+    def __init__(self, name, age, gender, student_id, major):
+        super().__init__(name, age, gender)
+        self.student_id = student_id
+        self.major = major
 
     def get_info(self):
-        pass
+        super().get_info()
+        print(f"Студенческий ID: {self.student_id}, Специальность: {self.major}")
+
 
 
 class Teacher():
