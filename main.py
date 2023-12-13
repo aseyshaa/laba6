@@ -1,9 +1,11 @@
 class Person:
-    def __init__(self):
-        pass
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
 
     def get_info(self):
-        pass
+        print(f"Имя: {self.name}, Возраст: {self.age}, Пол: {self.gender}")
 
 
 class Student():
