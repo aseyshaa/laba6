@@ -92,6 +92,7 @@ def view_department_heads(person_list):
 
 
 def main():
+    person_list = []
     while True:
         print("1. Добавить человека")
         print("2. Посмотреть список студентов")
